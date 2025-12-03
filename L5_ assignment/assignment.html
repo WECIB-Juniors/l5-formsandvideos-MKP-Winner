@@ -53,6 +53,47 @@
                             required>
                         <small>Required, we'll send search results to your email</small>
                     </div>
+
+                    <!-- Select dropdown for genre -->
+                    <div class="form-group">
+                        <label for="genre">Genre:</label>
+                        <select id="genre" name="genre">
+                            <option value="">-- Select a Genre --</option>
+                            <option value="action">Action</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="drama">Drama</option>
+                            <option value="horror">Horror</option>
+                            <option value="sci-fi">Sci-Fi</option>
+                            <option value="thriller">Thriller</option>
+                            <option value="romance">Romance</option>
+                            <option value="documentary">Documentary</option>
+                        </select>
+                    </div>
+
+                    <!-- Radio buttons for content type -->
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>Content Type:</legend>
+                            <div class="radio-group">
+                                <input type="radio" id="movie" name="type" value="movie" checked>
+                                <label for="movie">Movie</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="series" name="type" value="series">
+                                <label for="series">TV Series</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="both" name="type" value="both">
+                                <label for="both">Both</label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Checkbox for new releases filter -->
+                    <div class="form-group">
+                        <input type="checkbox" id="new-releases" name="new-releases" value="yes">
+                        <label for="new-releases">Show only new releases (last 12 months)</label>
+                    </div>
             </section>
         </main>
     </header>
