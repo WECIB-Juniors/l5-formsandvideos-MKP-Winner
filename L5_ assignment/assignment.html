@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L5 Assignment</title>
+    <title>StreamFlix - Movie & Series Database</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <main>
+            <section class="form-section">
+                <h2>Movie & Series Search</h2>
+                <p>Find detailed information about Movies and TV Series. Enter your search criteria below to explore our extensive database.</p>
+
+                <!-- Form method: GET is used because this is a search operation that retrieves data, allows bookmarking results, and shares queries via URL -->
+                <form action="https://httpbin.org/get" method="GET">
+
+                    <!-- Text input for movie/series title with validation -->
+                    <div class="form-group">
+                        <label for="title">Movie or Series Title:</label>
+                        <input 
+                            type="text" 
+                            id="title" 
+                            name="title" 
+                            placeholder="Enter title (e.g., Inception, Breaking Bad)"
+                            minlength="2"
+                            required>
+                        <small>Required, minimum 2 characters</small>
+                    </div>
+
+                    <!-- Text input for director/creator name -->
+                    <div class="form-group">
+                        <label for="creator">Director or Creator:</label>
+                        <input 
+                            type="text" 
+                            id="creator" 
+                            name="creator" 
+                            placeholder="Enter director or creator name"
+                            pattern="[A-Za-z\s\-.]+"
+                            title="Please enter a valid name (letters, spaces, hyphens, and periods only)">
+                        <small>Optional, letters and spaces only</small>
+                    </div>
+
+                    <!-- Email input for notifications with validation -->
+                    <div class="form-group">
+                        <label for="email">Email for Updates:</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="your.email@example.com"
+                            required>
+                        <small>Required, we'll send search results to your email</small>
+                    </div>
+            </section>
+        </main>
+    </header>
 </body>
 </html>
